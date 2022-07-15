@@ -8,7 +8,12 @@ const routes = [{
     name: "Main",
     component: () =>
         import ("../views/Main.vue"),
-    children: []
+    children: [{
+        path: "/home",
+        name: 'home',
+        component: () =>
+            import ('@/views/home.vue')
+    }]
 }]
 
 // 创建router实例对象路由器

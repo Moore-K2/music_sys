@@ -1,16 +1,18 @@
 <template>
   <div>
     <el-container style="height: 100%">
-      <el-aside width="auto">
-        <Aside />
-      </el-aside>
+      <el-header>
+        <Header />
+      </el-header>
       <el-container>
-        <el-header>
-          <Header />
-        </el-header>
-        <el-main>Main</el-main>
-        <el-footer>Footer</el-footer>
+        <el-aside width="auto">
+          <Aside />
+        </el-aside>
+        <el-main>
+          <router-view></router-view>
+        </el-main>
       </el-container>
+      <el-footer>Footer</el-footer>
     </el-container>
   </div>
 </template>
@@ -27,6 +29,9 @@ export default {
 <style lang="less" scoped>
 .el-aside {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+.el-header {
+  background-color: #333;
 }
 .el-main {
   // 设置main可覆盖
