@@ -5,7 +5,9 @@
         <Aside />
       </el-aside>
       <el-container>
-        <el-header>Header</el-header>
+        <el-header>
+          <Header />
+        </el-header>
         <el-main>Main</el-main>
         <el-footer>Footer</el-footer>
       </el-container>
@@ -15,9 +17,10 @@
 
 <script>
 import Aside from "@/components/Aside.vue";
+import Header from "@/components/Header.vue";
 export default {
   name: "Main",
-  components: { Aside },
+  components: { Aside, Header },
 };
 </script>
 

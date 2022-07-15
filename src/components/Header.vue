@@ -1,10 +1,15 @@
 <template>
-  <div></div>
+  <div class="header">
+    <div>header</div>
+    <div class="left-content"></div>
+  </div>
 </template>
 
 <script>
-export default {};
+export default {
+  name: "Header",
+};
 </script>
 
-<style>
+<style lang="less" scoped>
 </style>

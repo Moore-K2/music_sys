@@ -40,7 +40,7 @@ export default {
 
 <style lang="less" scoped>
 .el-menu-vertical-demo:not(.el-menu--collapse) {
-  width: 180px;
+  width: 170px;
   min-height: 400px;
 }
 .el-menu {
