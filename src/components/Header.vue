@@ -55,7 +55,7 @@ header {
 .left-content {
   display: flex;
   align-items: center;
-  padding-left: 47px;
+  padding-left: 62px;
   .el-button {
     margin-right: 20px;
   }
