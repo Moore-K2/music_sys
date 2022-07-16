@@ -1,73 +1,20 @@
 <template>
   <div>
     <el-row :gutter="20">
-      <!-- 利用v-for遍历渲染 -->
+      <!-- 利用v-for遍历渲染  user,singer, song,songlist-->
       <el-col :span="6" v-for="(item, index) in headList" :key="index">
+        <!-- 用el-card包裹更清晰 -->
         <el-card shadow="hover" :body-style="{ padding: '0px' }">
           <div class="card-wrapper">
+            <!-- 左边的icon图标 -->
             <div class="card-left">
-              <i
-                :class="'el-icon-' + item.icon"
-                :style="'color:' + item.color"
-              ></i>
+              <i :class="`el-icon-${item.icon}`" :style="'color:' + item.color">
+              </i>
             </div>
+            <!-- 右边的label与总数count -->
             <div class="card-right">
               <div class="card-num">{{ item.count }}</div>
               <div>{{ item.label }}</div>
-            </div>
-          </div>
-        </el-card>
-      </el-col>
-
-      <el-col :span="6">
-        <el-card shadow="hover" :body-style="{ padding: '0px' }">
-          <div class="card-wrapper">
-            <div class="card-left">
-              <i class="el-icon-user" style="color: red"></i>
-            </div>
-            <div class="card-right">
-              <div class="card-num">{{ 10 }}</div>
-              <div>用户总数</div>
-            </div>
-          </div>
-        </el-card>
-      </el-col>
-      <el-col :span="6">
-        <!-- 卡片包裹 -->
-        <el-card shadow="hover" :body-style="{ padding: '0px' }">
-          <div class="card-wrapper">
-            <div class="card-left">
-              <i class="el-icon-microphone" style="color: blue"></i>
-            </div>
-            <div class="card-right">
-              <div class="card-num">{{ 20 }}</div>
-              <div>歌曲总数</div>
-            </div>
-          </div>
-        </el-card>
-      </el-col>
-      <el-col :span="6">
-        <el-card shadow="hover" :body-style="{ padding: '0px' }">
-          <div class="card-wrapper">
-            <div class="card-left">
-              <i class="el-icon-service" style="color: black"></i>
-            </div>
-            <div class="card-right">
-              <div class="card-num">{{ 30 }}</div>
-              <div>歌手总数</div>
-            </div>
-          </div>
-        </el-card>
-      </el-col>
-      <el-col :span="6">
-        <el-card shadow="hover" :body-style="{ padding: '0px' }">
-          <div class="card-wrapper">
-            <div class="card-left">
-              <i class="el-icon-document" style="color: gold"></i>
-            </div>
-            <div class="card-right">
-              <div class="card-num">{{ 40 }}</div>
-              <div>歌单总数</div>
             </div>
           </div>
         </el-card>
@@ -136,6 +83,7 @@
 export default {
   data() {
     return {
+      // user, song,singer, songlist
       headList: [
         {
           label: "用户总数",
