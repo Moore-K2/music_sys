@@ -9,11 +9,30 @@ const routes = [{
     component: () =>
         import ("../views/Main.vue"),
     children: [{
-        path: "/home",
-        name: 'home',
-        component: () =>
-            import ('@/views/home.vue')
-    }]
+            path: "/home",
+            name: 'home',
+            component: () =>
+                import ('@/views/Home.vue')
+        },
+        {
+            path: "/user",
+            name: 'user',
+            component: () =>
+                import ('@/views/User.vue')
+        },
+        {
+            path: "/singer",
+            name: 'singer',
+            component: () =>
+                import ('@/views/Singer.vue')
+        },
+        {
+            path: "/songlist",
+            name: 'songlist',
+            component: () =>
+                import ('@/views/SongList.vue')
+        },
+    ]
 }]
 
 // 创建router实例对象路由器

@@ -8,8 +8,10 @@ import "./assets/css/reset.css";
 Vue.use(ElementUI)
 Vue.config.productionTip = false
 
+import store from "@/store"
 import router from '@/router'
 new Vue({
     render: h => h(App),
-    router
+    router,
+    store
 }).$mount('#app')

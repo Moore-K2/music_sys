@@ -1,9 +1,17 @@
 <template>
   <header>
-    <div class="left-content">
-      <el-button plain icon="el-icon-menu" size="mini"></el-button>
+    <div class="header">
+      <div class="left-content">
+        <el-button
+          icon="el-icon-menu"
+          size="mini"
+          type="primary"
+          @click="handleCollapse()"
+        ></el-button>
+        <div class="logo">{{ musicName }}</div>
+      </div>
+      <div class="right-content"></div>
     </div>
-    <div class="right-content"></div>
   </header>
 </template>
 
@@ -11,9 +19,21 @@
 export default {
   name: "Header",
   data() {
-    return {};
+    return {
+      musicName: "mm-cc 后台管理",
+    };
   },
-  methods: {},
+  methods: {
+    handleCollapse() {
+      console.log("操作侧栏");
+      // 提交HandleCollapse方法
+      this.$store.commit("HANDELCOLLAPSE");
+    },
+  },
+  mounted() {
+    const store = this.$store;
+    console.log(store);
+  },
 };
 </script>
 
@@ -25,6 +45,12 @@ header {
   width: 100%;
   justify-content: space-between;
   align-items: center;
+  background: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  color: #2c3e50;
+  // box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.3);
+  z-index: 100;
 }
 .left-content {
   display: flex;

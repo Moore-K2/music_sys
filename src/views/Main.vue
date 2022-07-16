@@ -28,13 +28,15 @@ export default {
 
 <style lang="less" scoped>
 .el-aside {
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
 }
 .el-header {
-  background-color: #333;
+  // background-color: #333;
+  box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.3);
+  padding: 0px;
 }
 .el-main {
   // 设置main可覆盖
-  padding-top: 0;
+  padding-top: 20px;
 }
 </style>
